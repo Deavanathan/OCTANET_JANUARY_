@@ -1,0 +1,48 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background:linear-gradient(144deg,hsl(200, 99%, 48%),hsl(45, 90%, 43%));
+    background-attachment: fixed;
+    margin:0;
+}
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+.task {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.task label {
+    font-weight: bold;
+}
+.task input[type="text"], .task select {
+    width: 80%;
+    padding: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.task button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.task button:hover {
+    background-color: #45a049;
+}
+.container {
+    width: 800px;
+    margin: 0 auto; 
+    border:1px solid white;
+}
+
+H1,H2{
+    background-color: rgb(218, 224, 29);
+    color:darkblue;
+    width:500px;
+}
