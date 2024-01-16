@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Project To-Do List</title>
+    <link rel="stylesheet" href="D:\ADD files\to_do_list.css">
+</head>
+<body>
+    <center>
+<h1>TO DO LIST</h1>
+<h2>OCTANET PROJECT 2</h2>
+    </center>
+
+<div class="container">
+    <div class="task">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" placeholder="Enter task name">
+    </div>
+    <div class="task">
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="design">Design</option>
+            <option value="development">Development</option>
+            <option value="testing">Testing</option>
+        </select>
+    </div>
+    <div class="task">
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline">
+    </div>
+    <div class="task">
+        <label for="priority">Priority:</label>
+        <select id="priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+    </div>
+    <div class="task">
+        <label for="label">Label:</label>
+        <input type="text" id="label" placeholder="Enter label">
+    </div>
+    <div class="task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+</div>
+<ul class="task-list" id="taskList">
+</ul>
+
+<script>
+    function addTask() {
+        var taskName = document.getElementById("taskName").value;
+        var category = document.getElementById("category").value;
+        var deadline = document.getElementById("deadline").value;
+        var priority = document.getElementById("priority").value;
+        var label = document.getElementById("label").value;
+
+        var taskList = document.getElementById("taskList");
+
+        var taskItem = document.createElement("li");
+        taskItem.className = "task";
+        taskItem.innerHTML = `
+            <label>Task Name:</label> ${taskName}<br>
+            <label>Category:</label> ${category}<br>
+            <label>Deadline:</label> ${deadline}<br>
+            <label>Priority:</label> ${priority}<br>
+            <label>Label:</label> ${label}
+        `;
+
+        taskList.appendChild(taskItem);
+
+        // Clear input fields after adding task
+        document.getElementById("taskName").value = "";
+        document.getElementById("category").value = "design";
+        document.getElementById("deadline").value = "";
+        document.getElementById("priority").value = "high";
+        document.getElementById("label").value = "";
+    }
+</script>
+
+</body>
+</html>
